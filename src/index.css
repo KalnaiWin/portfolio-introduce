@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .shiny-text {
-  color: #b5b5b5a4; 
+  color: #b5b5b5a4;
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0) 40%,
@@ -26,4 +26,11 @@
 
 .shiny-text.disabled {
   animation: none;
+}
+
+.center-absolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
