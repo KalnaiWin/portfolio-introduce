@@ -5,17 +5,17 @@ import { useRef, useState } from "react";
 import { imageFolder, ImageResources } from "../../utils/define";
 import AssetsImage from "./AssetsImage";
 import ImageSection from "./ImageSection";
-import { Link } from "react-router";
 
 const FileExplorer = () => {
   const icon = useRef(null);
   const listImage = useRef([]);
   const publicToggle = useRef(null);
+  const textRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
   const [isOpenTab, setIsOpenTab] = useState({
     isOpenAssets: false,
     isOpenImages: false,
   });
-  const [isOpen, setIsOpen] = useState(false);
 
   useGSAP(() => {
     gsap.set(listImage.current, {
@@ -39,6 +39,20 @@ const FileExplorer = () => {
         },
         0
       );
+
+    gsap.fromTo(
+      textRef.current,
+      {
+        x: 200,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 2,
+        ease: "power3.inOut",
+      }
+    );
   }, []);
 
   const handleClick = (stateKey) => {
@@ -113,9 +127,13 @@ const FileExplorer = () => {
                 alt="Default"
                 className="object-cover w-full h-full absolute"
               />
-              <div className="text-black text-3xl w-1/2 h-full text-center font-bold absolute right-0 top-0 backdrop-blur-xl p-5 flex items-center">
-                These are all images and icons I used for this project and some
-                their resources. Some of those quite fade but I have fix it with figma and some tool convert image such as Convertio.io
+              <div className="w-1/2 h-full text-center absolute right-0 top-0 backdrop-blur-xl p-5 flex items-center">
+                <p className="text-black text-3xl font-bold" ref={textRef}>
+                  These are all images and icons I used for this project and
+                  some their resources. Some of those quite fade, so I have
+                  fixed it with figma and some tool convert image such as
+                  Convertio.io
+                </p>
               </div>
             </>
           )}
