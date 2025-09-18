@@ -1,4 +1,4 @@
-import { Search } from "lucide-react";
+import { Search, XIcon } from "lucide-react";
 import { IconDefault, IconSystem } from "../../utils/define";
 import { useNavigate } from "react-router";
 import { useState } from "react";
@@ -9,6 +9,7 @@ import ZaloApp from "./ZaloApp";
 import CodeVS from "./CodeVS";
 import WindowButton from "../_components/WindowButton";
 import DateTimePage from "../_components/DateTimePage";
+import CloseTab from "../_components/CloseTab";
 
 const DesktopScreen = () => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const DesktopScreen = () => {
 
   const handleIconClick = (stateKey) => {
     setOpenWindows((prev) => ({
-      ...prev,
+      // ...prev,
       [stateKey]: !prev[stateKey],
     }));
   };
@@ -38,31 +39,63 @@ const DesktopScreen = () => {
     <div className="relative w-full h-screen overflow-hidden">
       {isLoading && <LoadingGame />}
       {openWindows.isOpenFile && (
-        <div className="center-absolute z-1">
-          <div>
-            <FileExplorer />
-          </div>
+        <div className="center-absolute z-1 border w-[80%] h-[80%]">
+          <CloseTab
+            imageString={"/assets/folder.png"}
+            text={"File Explorer"}
+            onClose={() =>
+              setOpenWindows((prev) => ({
+                ...prev,
+                isOpenFile: false,
+              }))
+            }
+          />
+          <FileExplorer />
         </div>
       )}
       {openWindows.isOpenChrome && (
-        <div className="center-absolute z-1">
-          <div>
-            <ChromeWeb />
-          </div>
+        <div className="center-absolute z-1 border w-[80%] h-[80%]">
+          <CloseTab
+            imageString={"/assets/chrome.png"}
+            text={"Chrome"}
+            onClose={() =>
+              setOpenWindows((prev) => ({
+                ...prev,
+                isOpenChrome: false,
+              }))
+            }
+          />
+          <ChromeWeb />
         </div>
       )}
       {openWindows.isOpenZalo && (
-        <div className="center-absolute z-1">
-          <div>
-            <ZaloApp />
-          </div>
+        <div className="center-absolute z-1 border w-[80%] h-[80%]">
+          <CloseTab
+            imageString={"/assets/zalo.png"}
+            text={"Zalo"}
+            onClose={() =>
+              setOpenWindows((prev) => ({
+                ...prev,
+                isOpenZalo: false,
+              }))
+            }
+          />
+          <ZaloApp />
         </div>
       )}
       {openWindows.isOpenCode && (
-        <div className="center-absolute z-1">
-          <div>
-            <CodeVS />
-          </div>
+        <div className="center-absolute z-1 border w-[80%] h-[80%]">
+          <CloseTab
+            imageString={"/assets/vsc.png"}
+            text={"Visual Studio Code"}
+            onClose={() =>
+              setOpenWindows((prev) => ({
+                ...prev,
+                isOpenCode: false,
+              }))
+            }
+          />
+          <CodeVS />
         </div>
       )}
       <div className="absolute w-full h-screen">
@@ -75,15 +108,22 @@ const DesktopScreen = () => {
       <div className="absolute w-full h-[50px] backdrop-blur-3xl bottom-0 mx-auto py-2 flex items-center">
         <div className="w-full flex items-center justify-center gap-3 absolute">
           <WindowButton />
-          <div className="relative flex items-center">
-            <div className="absolute left-2">
+          <div className="relative flex items-center overflow-hidden p-1">
+            <div className="absolute left-3.5">
               <Search className="size-4 scale-x-[-1] text-white" />
             </div>
             <input
               type="text"
-              className="w-[180px] bg-[#3c536a] rounded-full indent-8 placeholder:text-white text-sm p-1 focus:outline-none text-white"
+              className="w-[180px] bg-[#3c536a] rounded-full indent-7 placeholder:text-white text-sm p-1 text-white focus:bg-[#1e2a37]"
               placeholder="Search"
             />
+            <div className="absolute right-1.5">
+              <img
+                src="/images/nature-input.svg"
+                alt="Nature Input"
+                className="size-9"
+              />
+            </div>
           </div>
           <div className="flex gap-2">
             {IconDefault.map((icon, index) => (
