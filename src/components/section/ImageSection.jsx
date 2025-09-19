@@ -2,7 +2,7 @@ import { ImageList } from "../../utils/define";
 
 const ImageSection = () => {
   return (
-    <div className="grid grid-cols-3 gap-2 p-2">
+    <div className="grid grid-cols-3 gap-2 p-2 overflow-auto">
       {ImageList.map((image, index) => (
         <div
           key={index}

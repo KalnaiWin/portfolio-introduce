@@ -21,6 +21,13 @@ const DesktopScreen = () => {
     isOpenZalo: false,
   });
 
+  const [windowSize, setWindowSize] = useState({
+    windowFile: false,
+    windowChrome: false,
+    windowCode: false,
+    windowZalo: false,
+  });
+
   const handleIconClick = (stateKey) => {
     setOpenWindows((prev) => ({
       // ...prev,
@@ -39,7 +46,13 @@ const DesktopScreen = () => {
     <div className="relative w-full h-screen overflow-hidden">
       {isLoading && <LoadingGame />}
       {openWindows.isOpenFile && (
-        <div className="center-absolute z-1 border w-[80%] h-[80%]">
+        <div
+          className={`z-1 border ${
+            windowSize.windowFile
+              ? "w-[80%] h-[80%] center-absolute"
+              : "w-full h-[90%] absolute top-0"
+          } `}
+        >
           <CloseTab
             imageString={"/assets/folder.png"}
             text={"File Explorer"}
@@ -49,12 +62,24 @@ const DesktopScreen = () => {
                 isOpenFile: false,
               }))
             }
+            open={() =>
+              setWindowSize((prev) => ({
+                ...prev,
+                windowFile: !prev.windowFile,
+              }))
+            }
           />
           <FileExplorer />
         </div>
       )}
       {openWindows.isOpenChrome && (
-        <div className="center-absolute z-1 border w-[80%] h-[80%]">
+        <div
+          className={` z-1 border ${
+            windowSize.windowChrome
+              ? "w-[80%] h-[80%] center-absolute"
+              : "w-full h-[90%] absolute top-0"
+          } `}
+        >
           <CloseTab
             imageString={"/assets/chrome.png"}
             text={"Chrome"}
@@ -64,12 +89,24 @@ const DesktopScreen = () => {
                 isOpenChrome: false,
               }))
             }
+            open={() =>
+              setWindowSize((prev) => ({
+                ...prev,
+                windowChrome: !prev.windowChrome,
+              }))
+            }
           />
           <ChromeWeb />
         </div>
       )}
       {openWindows.isOpenZalo && (
-        <div className="center-absolute z-1 border w-[80%] h-[80%]">
+        <div
+          className={` z-1 border ${
+            windowSize.windowZalo
+              ? "w-[80%] h-[80%] center-absolute"
+              : "w-full h-[90%] absolute top-0"
+          } `}
+        >
           <CloseTab
             imageString={"/assets/zalo.png"}
             text={"Zalo"}
@@ -79,12 +116,24 @@ const DesktopScreen = () => {
                 isOpenZalo: false,
               }))
             }
+            open={() =>
+              setWindowSize((prev) => ({
+                ...prev,
+                windowZalo: !prev.windowZalo,
+              }))
+            }
           />
           <ZaloApp />
         </div>
       )}
       {openWindows.isOpenCode && (
-        <div className="center-absolute z-1 border w-[80%] h-[80%]">
+        <div
+          className={` z-1 border ${
+            windowSize.windowCode
+              ? "w-[80%] h-[80%] center-absolute"
+              : "w-full h-[90%] absolute top-0"
+          } `}
+        >
           <CloseTab
             imageString={"/assets/vsc.png"}
             text={"Visual Studio Code"}
@@ -92,6 +141,12 @@ const DesktopScreen = () => {
               setOpenWindows((prev) => ({
                 ...prev,
                 isOpenCode: false,
+              }))
+            }
+            open={() =>
+              setWindowSize((prev) => ({
+                ...prev,
+                windowCode: !prev.windowCode,
               }))
             }
           />
@@ -105,7 +160,7 @@ const DesktopScreen = () => {
           className="absolute top-0 left-0 w-full h-full object-cover"
         />
       </div>
-      <div className="absolute w-full h-[50px] backdrop-blur-3xl bottom-0 mx-auto py-2 flex items-center">
+      <div className="absolute w-full h-[50px] backdrop-blur-3xl bottom-0 mx-auto py-2 flex items-center z-20">
         <div className="w-full flex items-center justify-center gap-3 absolute">
           <WindowButton />
           <div className="relative flex items-center overflow-hidden p-1">
