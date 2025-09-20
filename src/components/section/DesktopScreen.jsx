@@ -193,7 +193,7 @@ const DesktopScreen = () => {
                 <span
                   className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2
                    bg-black text-white text-xs rounded px-2 py-1 opacity-0
-                   group-hover:opacity-100 transition-opacity duration-200 group-hover:delay-1000 whitespace-nowrap"
+                   group-hover:opacity-100 transition-opacity translate-y-10 group-hover:translate-y-0 duration-200 group-hover:delay-1000 whitespace-nowrap"
                 >
                   {icon.title}
                 </span>

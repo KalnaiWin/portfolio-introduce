@@ -86,6 +86,11 @@ export const ImageResources = [
     name: "canva",
     link: "https://www.canva.com",
   },
+  {
+    logo: "/assets/unsplash.png",
+    name: "unsplash",
+    link: "https://www.unsplash.com",
+  },
 ];
 
 export const TabItems = [
@@ -181,6 +186,73 @@ export const ImageList = [
     href: "/images/defaultFile.png",
     alt: "default",
   },
+  {
+    href: "/images/waterfall.jpg",
+    alt: "waterfall",
+  },
+  {
+    href: "/images/nature.jpg",
+    alt: "nature",
+  },
+  {
+    href: "/images/tree.jpg",
+    alt: "tree",
+  },
+  {
+    href: "/images/seaside.jpg",
+    alt: "seaside",
+  },
+  {
+    href: "/images/sea.jpg",
+    alt: "sea",
+  },
+  {
+    href: "/images/sky.jpg",
+    alt: "sky",
+  },
+  {
+    href: "/images/sunside.jpg",
+    alt: "sunside",
+  },
+  {
+    href: "/images/cloud.jpg",
+    alt: "cloud",
+  },
+];
+
+export const randomImage = [
+  {
+    href: "/images/waterfall.jpg",
+    alt: "waterfall",
+  },
+  {
+    href: "/images/nature.jpg",
+    alt: "nature",
+  },
+  {
+    href: "/images/tree.jpg",
+    alt: "tree",
+  },
+  {
+    href: "/images/seaside.jpg",
+    alt: "seaside",
+  },
+  {
+    href: "/images/sea.jpg",
+    alt: "sea",
+  },
+  {
+    href: "/images/sky.jpg",
+    alt: "sky",
+  },
+  {
+    href: "/images/sunside.jpg",
+    alt: "sunside",
+  },
+  {
+    href: "/images/cloud.jpg",
+    alt: "cloud",
+  },
 ];
 
 export const ImageAssetsList = [
@@ -247,5 +319,39 @@ export const ImageAssetsList = [
   {
     href: "/assets/canva.png",
     alt: "Canva",
+  },
+  {
+    href: "/assets/user.png",
+    alt: "USer",
+  },
+  {
+    href: "/assets/facebook.png",
+    alt: "USer",
+  },
+  {
+    href: "/assets/linkden.png",
+    alt: "USer",
+  },
+  {
+    href: "/assets/github.png",
+    alt: "USer",
+  },
+];
+
+export const LinkSocialMedia = [
+  {
+    src: "/assets/facebook.png",
+    name: "facebook",
+    link: "https://github.com",
+  },
+  {
+    src: "/assets/linkden.png",
+    name: "linkedin",
+    link: "https://www.linkedin.com",
+  },
+  {
+    src: "/assets/github.png",
+    name: "github",
+    link: "https://www.facebook.com",
   },
 ];
