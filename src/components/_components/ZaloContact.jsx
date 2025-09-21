@@ -15,7 +15,6 @@ import {
   Video,
 } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import { getCurrentTime } from "../../utils/support";
 
 const ZaloContact = () => {
   const [IsPending, setIsPending] = useState(false);
@@ -26,7 +25,6 @@ const ZaloContact = () => {
   useEffect(() => {
     sessionStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
-  // const [message, setMessage] = useState("");
   const [times, setTimes] = useState(() => {
     const saved = sessionStorage.getItem("times");
     return saved ? JSON.parse(saved) : [];
