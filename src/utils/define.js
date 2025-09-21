@@ -342,7 +342,7 @@ export const LinkSocialMedia = [
   {
     src: "/assets/facebook.png",
     name: "facebook",
-    link: "https://github.com",
+    link: "https://www.facebook.com",
   },
   {
     src: "/assets/linkden.png",
@@ -352,6 +352,6 @@ export const LinkSocialMedia = [
   {
     src: "/assets/github.png",
     name: "github",
-    link: "https://www.facebook.com",
+    link: "https://github.com",
   },
 ];
