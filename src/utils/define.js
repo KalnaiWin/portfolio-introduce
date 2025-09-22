@@ -1,3 +1,5 @@
+import { Folder, Hexagon } from "lucide-react";
+
 export const IconDefault = [
   {
     src: "/assets/folder.png",
@@ -336,6 +338,14 @@ export const ImageAssetsList = [
     href: "/assets/github.png",
     alt: "USer",
   },
+  {
+    href: "/assets/react.png",
+    alt: "React",
+  },
+  {
+    href: "/assets/nextjs.png",
+    alt: "Nextjs",
+  },
 ];
 
 export const LinkSocialMedia = [
@@ -353,5 +363,243 @@ export const LinkSocialMedia = [
     src: "/assets/github.png",
     name: "github",
     link: "https://github.com",
+  },
+];
+
+export const TreeDataReact = [
+  {
+    name: "node_module",
+    type: "folder",
+  },
+  {
+    name: "public",
+    type: "folder",
+    children: [
+      {
+        name: "assets",
+        type: "folder",
+      },
+      {
+        name: "images",
+        type: "folder",
+      },
+      {
+        name: "videos",
+        type: "folder",
+      },
+    ],
+  },
+  {
+    name: "src",
+    type: "folder",
+    children: [
+      {
+        name: "components",
+        type: "folder",
+      },
+      {
+        name: "features",
+        type: "folder",
+      },
+      {
+        name: "hooks",
+        type: "folder",
+      },
+      {
+        name: "layous",
+        type: "folder",
+      },
+      {
+        name: "pages",
+        type: "folder",
+      },
+      {
+        name: "services",
+        type: "folder",
+      },
+      {
+        name: "stores",
+        type: "folder",
+      },
+      {
+        name: "styles",
+        type: "folder",
+      },
+      {
+        name: "utils",
+        type: "folder",
+      },
+      {
+        name: "app.jsx",
+        type: "file",
+      },
+      {
+        name: "index.css",
+        type: "file",
+      },
+      {
+        name: "main.jsx",
+        type: "file",
+      },
+    ],
+  },
+  {
+    name: ".env",
+    type: "file",
+  },
+  {
+    name: ".gitignore",
+    type: "file",
+  },
+  {
+    name: "eslint.config.js",
+    type: "file",
+  },
+  {
+    name: "index.html",
+    type: "file",
+  },
+  {
+    name: "package-lock.json",
+    type: "file",
+  },
+  {
+    name: "package.json",
+    type: "file",
+  },
+  {
+    name: "README.md",
+    type: "file",
+  },
+  {
+    name: "vite.config.js",
+    type: "file",
+  },
+];
+
+export const TreeDataNextjs = [
+  {
+    name: ".next",
+    type: "folder",
+  },
+  {
+    name: "node_modules",
+    type: "folder",
+  },
+  {
+    name: "public",
+    type: "folder",
+    children: [
+      {
+        name: "assets",
+        type: "folder",
+      },
+      {
+        name: "images",
+        type: "folder",
+      },
+      {
+        name: "videos",
+        type: "folder",
+      },
+    ],
+  },
+  {
+    name: "src",
+    type: "folder",
+    children: [
+      {
+        name: "actions",
+        type: "folder",
+      },
+      {
+        name: "app",
+        type: "folder",
+      },
+      {
+        name: "components",
+        type: "folder",
+        children: [
+          {
+            name: "animation",
+            type: "folder",
+          },
+          {
+            name: "auth",
+            type: "folder",
+          },
+          {
+            name: "UI",
+            type: "folder",
+          },
+        ],
+      },
+      {
+        name: "lib",
+        type: "folder",
+        children: [
+          {
+            name: "types",
+            type: "folder",
+          },
+          {
+            name: "hooks",
+            type: "folder",
+          },
+        ],
+      },
+      {
+        name: "utils",
+        type: "folder",
+      },
+      {
+        name: "middleware.ts",
+        type: "file",
+      },
+    ],
+  },
+  {
+    name: ".env",
+    type: "file",
+  },
+  {
+    name: ".gitinore",
+    type: "file",
+  },
+  {
+    name: "components.json",
+    type: "file",
+  },
+  {
+    name: "eslint.config.mjs",
+    type: "file",
+  },
+  {
+    name: "next-endv.d.ts",
+    type: "file",
+  },
+  {
+    name: "next.config.ts",
+    type: "file",
+  },
+  {
+    name: "package-lock.json",
+    type: "file",
+  },
+  {
+    name: "package.json",
+    type: "file",
+  },
+  {
+    name: "postcss.config.mjs",
+    type: "file",
+  },
+  {
+    name: "README.md",
+    type: "file",
+  },
+  {
+    name: "tsconfig.json",
+    type: "file",
   },
 ];

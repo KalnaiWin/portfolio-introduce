@@ -133,19 +133,15 @@ const ZaloContact = () => {
         <div className="mt-2 bg-[#1D2025] text-white w-full px-20 py-2">
           <div className="flex gap-2 w-full justify-between">
             {LinkSocialMedia.map((item, index) => (
-              <div
+              <a
+                href={item.link}
+                target="_blank"
                 className="flex flex-col gap-2 my-2 items-center"
                 key={index}
               >
                 <img src={item.src} alt="Link Item" className="size-5" />
-                <a
-                  href={item.link}
-                  target="_blank"
-                  className="text-sm underline"
-                >
-                  {item.name}
-                </a>
-              </div>
+                <div className="text-sm underline">{item.name}</div>
+              </a>
             ))}
           </div>
         </div>
