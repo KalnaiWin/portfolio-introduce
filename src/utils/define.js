@@ -220,6 +220,18 @@ export const ImageList = [
     href: "/images/cloud.jpg",
     alt: "cloud",
   },
+  {
+    href: "/images/pet-shop-2.png",
+    alt: "Nextflix",
+  },
+  {
+    href: "/images/pet-shop-1.png",
+    alt: "Nextflix",
+  },
+  {
+    href: "/images/nextflix.png",
+    alt: "Nextflix",
+  },
 ];
 
 export const randomImage = [
@@ -345,6 +357,10 @@ export const ImageAssetsList = [
   {
     href: "/assets/nextjs.png",
     alt: "Nextjs",
+  },
+  {
+    href: "/assets/icon-react.png",
+    alt: "IconReact",
   },
 ];
 
@@ -601,5 +617,46 @@ export const TreeDataNextjs = [
   {
     name: "tsconfig.json",
     type: "file",
+  },
+];
+
+export const projectImages = [
+  {
+    src: "/images/pet-shop-2.png",
+    alt: "Nextflix",
+    title: "Tiddy Pet Shop Version 2",
+    description: "Version 2 of tiddy Pet Shop",
+    used: [
+      "nextjs",
+      "better-auth",
+      "shadcnUI",
+      "prisma",
+      "neon",
+      "stripe",
+      "argon2",
+      "uploadthing",
+      "nodemailder",
+      "redis",
+    ],
+    github: "https://github.com/KalnaiWin/pet-shopping",
+    vercel: "https://pet-shopping.vercel.app",
+  },
+  {
+    src: "/images/pet-shop-1.png",
+    alt: "Nextflix",
+    title: "Tiddy Pet Shop Version 2",
+    description: "Version 1 of tiddy Pet Shop",
+    used: ["react", "vite", "tailwind"],
+    github: "https://github.com/KalnaiWin/Demo_LandingPage_PetShop",
+    vercel: "https://demo-landing-page-pet-shop.vercel.app",
+  },
+  {
+    src: "/images/nextflix.png",
+    alt: "Nextflix",
+    title: "Tiddy Pet Shop Version 2",
+    description: "Landing page of Nextflix",
+    used: ["react", "vite", "tailwind"],
+    github: "https://github.com/KalnaiWin/Nextflix-Clone",
+    vercel: "https://nextflix-clone-gkfy.vercel.app",
   },
 ];
