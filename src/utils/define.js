@@ -232,6 +232,10 @@ export const ImageList = [
     href: "/images/nextflix.png",
     alt: "Nextflix",
   },
+  {
+    href: "/images/portfolio.png",
+    alt: "Portfolio",
+  },
 ];
 
 export const randomImage = [
