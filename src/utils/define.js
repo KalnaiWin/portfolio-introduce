@@ -660,3 +660,55 @@ export const projectImages = [
     vercel: "https://nextflix-clone-gkfy.vercel.app",
   },
 ];
+
+export const educationProgress = [
+  {
+    date: "02/07/2024 - 10/11/2024",
+    learned: ["C++", "HTML", "CSS", "Javascript"],
+  },
+  {
+    date: "30/12/2024 - 15/02/2025",
+    learned: ["React", "Tailwind", "Figma"],
+  },
+  {
+    date: "26/02/2025 - 28/06/2025",
+    learned: [
+      "Nextjs",
+      "Typescript",
+      "Better-auth",
+      "Prisma",
+      "DSA",
+      "GSAP",
+      "Blender",
+    ],
+  },
+  {
+    date: "08/09/2025 - 30/04/2026",
+    learned: ["SQL Server", "OOP", "Nodejs", "MongoDB", "Express", "OOP"],
+  },
+  {
+    date: "30/04/2026 - now",
+    learned: ["still learning"],
+  },
+];
+
+export const Certification = [
+  {
+    image: "/images/UXcourse1.png",
+    alt: "Course1",
+    time: "13 hours",
+    grade: "85",
+  },
+  {
+    image: "/images/UXcourse1.png",
+    alt: "Course1",
+    time: "13 hours",
+    grade: "85",
+  },
+  {
+    image: "/images/UXcourse1.png",
+    alt: "Course1",
+    time: "13 hours",
+    grade: "85",
+  },
+];
